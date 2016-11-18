@@ -20,4 +20,8 @@
     }).mouseleave(function() {
       $(this).popover('hide');
     });
+
+    $('.carousel').carousel({
+      interval: 5000
+    });
   });
