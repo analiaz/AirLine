@@ -1,0 +1,21 @@
+.body {
+  background-color: #bbb;
+}
+
+.container-head {
+  background: #BF3E11;
+}
+
+.tooltip-carousel {
+  position: absolute;
+  z-index: 11;
+  border-radius: 50%;
+}
+
+.caraousel-tooltip-item {
+  display: none;
+}
+
+.caraousel-tooltip-item.active {
+  display: block;
+}
