@@ -1,0 +1,29 @@
+.navbar{
+    margin-bottom: 0;
+    background-color: #B71C1C;
+    z-index: 1000;
+}
+
+.navbar-default {
+    border-color: #B71C1C;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #f5f4f1;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #f5f4f1;
+    background-color: #B71C1C;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #B71C1C;
+    background-color: #f5f4f1;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    color: #f5f4f1;
+    text-decoration: none;
+    background-color: #B71C1C;
+}
