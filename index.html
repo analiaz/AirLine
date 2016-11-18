@@ -11,6 +11,51 @@
     <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./index.css">
     <script src="./common.js"></script>
+
+    <script type="text/javascript">
+        function consultarVuelos() {
+            console.log("consultaVuelo, init");
+
+            var consulta = {
+                origen: $("#input-origen").val(),
+                destino: $("#input-destino").val(),
+                salida: $("#input-fecha-salida").val(),
+                pasajeros: $("#input-pasajeros").val()
+            }
+
+            console.log("consultaVuelo, consulta: " + JSON.stringify(consulta));
+
+            $.ajax({
+                url: "/airline/scripts/consultasVuelos.php",
+                type: "POST",
+                data: JSON.stringify(consulta),
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                timeout: 30000,
+                success: function (result, textStatus, jqXHR) {
+                    if (!result.error) {
+                        result.vuelos.forEach(function(vuelo) {
+                            console.log("vuelo id = " + vuelo.vuelo_id);
+                            var contenido =
+                                "<div>" +
+                                `   <span>${consulta.origen}</span>` +
+                                `   <span>${consulta.destino}</span>` +
+                                `   <span>${vuelo.fecha_partida}</span>` +
+                                `   <span>${vuelo.fecha_llegada}</span>` +
+                                `   <span>\$${vuelo.precio}</span>` +
+                                "</div>";
+                            $("#tab-vuelos").append(contenido);
+                        });
+                    } else {
+                        console.log("consultaVuelo, serverError: " + result.error);
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log("consultaVuelo, clientError: " + errorThrown);
+                }
+            });
+        }
+    </script>
 </head>
 <body>
     <header id="header"></header>
@@ -61,6 +106,68 @@
             <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right"></span>
             </a>
+        </div>
+    </div>
+
+    <div id="rootwizard">
+        <ul class="nav nav-pills nav-wizard">
+            <li><a href="#tab-busqueda" data-toggle="tab">Buscar vuelo</a></li>
+            <li><a href="#tab-vuelos" data-toggle="tab">Vuelos disponibles</a></li>
+            <li><a href="#tab-datos-personales" data-toggle="tab">Datos personales</a></li>
+            <li><a href="#tab-pagar" data-toggle="tab">Pagar</a></li>
+            <li><a href="#tab-boleto" data-toggle="tab">Su boleto</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="tab-busqueda" class="tab-pane">
+                <div>
+                    <select id="input-origen" class="selectpicker">
+                        <optgroup label="Argentina">
+                            <option>BUENOS AIRES</option>
+                            <option>JUJUY</option>
+                            <option>SALTA</option>
+                        </optgroup>
+                        <optgroup label="Japón">
+                            <option>TOKYO</option>
+                            <option>KYOTO</option>
+                            <option>NAGASAKI</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>  
+                    <select id="input-destino" class="selectpicker">
+                        <optgroup label="Argentina">
+                            <option>BUENOS AIRES</option>
+                            <option>JUJUY</option>
+                            <option>SALTA</option>
+                        </optgroup>
+                        <optgroup label="Japón">
+                            <option>TOKYO</option>
+                            <option>KYOTO</option>
+                            <option>NAGASAKI</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>   
+                    <input id="input-fecha-salida" type="date">
+                </div>
+                <div>  
+                    <input id="input-pasajeros" type="number" min=1 step=1 value=1>
+                </div>
+                <div>
+                    <input type="button" value="Buscar" onclick="consultarVuelos();">
+                </div>
+            </div>
+            <div id="tab-vuelos" class="tab-pane"></div>
+            <div id="tab-datos-personales" class="tab-pane">
+            </div>
+            <div id="tab-pagar" class="tab-pane">
+            </div>
+            <div id="tab-boleto" class="tab-pane">
+            </div>
+            <ul class="pager wizard">
+                <li class="previous"><a href="#">Anterior</a></li>
+                <li class="next"><a href="#">Siguiente</a></li>
+            </ul>
         </div>
     </div>
 
