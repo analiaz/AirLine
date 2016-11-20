@@ -1,0 +1,40 @@
+#footer {
+    background-color: #251a06;
+    color: #f5f4f1;
+}
+
+
+.list-group {
+    padding-left: 0;
+    margin-bottom: 0px;
+    padding: 20px;
+}
+
+/* ----------------------- botones redes socales--------------------*/
+
+.list-group {
+    margin: 0 auto;
+    padding: 0px;
+    position: relative;
+    width: 400px;
+}
+.list-group a {
+	text-align: center;
+	font-size: 20px;
+}
+
+.fa-stack {
+    position: relative;
+    display: inline-block;
+    width: 1em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+}
+element.style {
+    border-bottom-width: 10px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 15px;
+}
