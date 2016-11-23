@@ -111,66 +111,70 @@
         </div>
     </div>
 
-    <div id="rootwizard">
-        <ul class="nav nav-pills nav-wizard">
-            <li><a href="#tab-busqueda" data-toggle="tab">Buscar vuelo</a></li>
-            <li><a href="#tab-vuelos" data-toggle="tab">Vuelos disponibles</a></li>
-            <li><a href="#tab-datos-personales" data-toggle="tab">Datos personales</a></li>
-            <li><a href="#tab-pagar" data-toggle="tab">Pagar</a></li>
-            <li><a href="#tab-boleto" data-toggle="tab">Su boleto</a></li>
-        </ul>
-        <div class="tab-content">
-            <div id="tab-busqueda" class="tab-pane">
-                <div>
-                    <select id="input-origen" class="selectpicker">
-                        <optgroup label="Argentina">
-                            <option>BUENOS AIRES</option>
-                            <option>JUJUY</option>
-                            <option>SALTA</option>
-                        </optgroup>
-                        <optgroup label="Japón">
-                            <option>TOKYO</option>
-                            <option>KYOTO</option>
-                            <option>NAGASAKI</option>
-                        </optgroup>
-                    </select>
+    <div class="conteiner-fluid wizard-area">
+        <div class="row" >
+            <div id="rootwizard">
+                <ul class="nav nav-pills nav-wizard wizard-menu">
+                    <li><a href="#tab-busqueda" data-toggle="tab">Buscar vuelo</a></li>
+                    <li><a href="#tab-vuelos" data-toggle="tab">Vuelos disponibles</a></li>
+                    <li><a href="#tab-datos-personales" data-toggle="tab">Datos personales</a></li>
+                    <li><a href="#tab-pagar" data-toggle="tab">Pagar</a></li>
+                    <li><a href="#tab-boleto" data-toggle="tab">Su boleto</a></li>
+                </ul>
+                <div class="tab-content text-center">
+                    <div id="tab-busqueda" class="tab-pane">
+                        <div>
+                            <select id="input-origen" class="selectpicker">
+                                <optgroup label="Argentina">
+                                    <option>BUENOS AIRES</option>
+                                    <option>JUJUY</option>
+                                    <option>SALTA</option>
+                                </optgroup>
+                                <optgroup label="Japón">
+                                    <option>TOKYO</option>
+                                    <option>KYOTO</option>
+                                    <option>NAGASAKI</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    <div>
+                        <select id="input-destino" class="selectpicker">
+                            <optgroup label="Argentina">
+                                <option>BUENOS AIRES</option>
+                                <option>JUJUY</option>
+                                <option>SALTA</option>
+                            </optgroup>
+                            <optgroup label="Japón">
+                                <option>TOKYO</option>
+                                <option>KYOTO</option>
+                                <option>NAGASAKI</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div>
+                        <input id="input-fecha-salida" type="date">
+                    </div>
+                    <div>
+                        <input id="input-pasajeros" type="number" min=1 step=1 value=1>
+                    </div>
+                    <div>
+                        <input type="button" value="Buscar" onclick="consultarVuelos();">
+                    </div>
                 </div>
-                <div>  
-                    <select id="input-destino" class="selectpicker">
-                        <optgroup label="Argentina">
-                            <option>BUENOS AIRES</option>
-                            <option>JUJUY</option>
-                            <option>SALTA</option>
-                        </optgroup>
-                        <optgroup label="Japón">
-                            <option>TOKYO</option>
-                            <option>KYOTO</option>
-                            <option>NAGASAKI</option>
-                        </optgroup>
-                    </select>
+                <div id="tab-vuelos" class="tab-pane"></div>
+                <div id="tab-datos-personales" class="tab-pane">
                 </div>
-                <div>   
-                    <input id="input-fecha-salida" type="date">
+                <div id="tab-pagar" class="tab-pane">
                 </div>
-                <div>  
-                    <input id="input-pasajeros" type="number" min=1 step=1 value=1>
+                <div id="tab-boleto" class="tab-pane">
                 </div>
-                <div>
-                    <input type="button" value="Buscar" onclick="consultarVuelos();">
-                </div>
+                <ul class="pager wizard">
+                    <li class="previous"><a href="#">Anterior</a></li>
+                    <li class="next"><a href="#">Siguiente</a></li>
+                </ul>
             </div>
-            <div id="tab-vuelos" class="tab-pane"></div>
-            <div id="tab-datos-personales" class="tab-pane">
-            </div>
-            <div id="tab-pagar" class="tab-pane">
-            </div>
-            <div id="tab-boleto" class="tab-pane">
-            </div>
-            <ul class="pager wizard">
-                <li class="previous"><a href="#">Anterior</a></li>
-                <li class="next"><a href="#">Siguiente</a></li>
-            </ul>
         </div>
+    </div>
     </div>
 
     <footer id="footer"></footer>

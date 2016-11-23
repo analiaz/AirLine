@@ -1,3 +1,41 @@
+/*----------------------------- wizard----------------------------- */
+
+.wizard-menu {
+    margin: auto;
+    width: 50%;
+}
+
+.wizard-menu a {
+ color: #251a06;
+ border: 1px solid #251A06;
+}
+
+.wizard-area{
+  background-color: #f5f4f1
+}
+
+.pager {
+    margin-left: 25%;
+    margin-right: 30%;
+}
+
+.pager a{
+  color: #251a06;
+}
+
+pager li>a, .pager li>span {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #f5f4f1;
+    border: 1px solid #251A06;
+    border-radius: 15px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #f5f4f1;
+    background-color: #251A06;
+}
+
 .container-head {
   background: #BF3E11;
 }
@@ -14,4 +52,5 @@
 
 .caraousel-tooltip-item.active {
   display: block;
-}
+} */
+
