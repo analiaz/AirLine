@@ -36,6 +36,9 @@ pager li>a, .pager li>span {
     background-color: #251A06;
 }
 
+
+/*------------------------- Carrusel --------------------------------------*/
+
 .container-head {
   background: #BF3E11;
 }
@@ -52,5 +55,10 @@ pager li>a, .pager li>span {
 
 .caraousel-tooltip-item.active {
   display: block;
-} */
+}
 
+.carousel-inner img {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: cover;
+}
