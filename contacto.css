@@ -1,0 +1,35 @@
+.recuadro {
+    background-color: #f5f4f1;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto; 
+}
+
+.img-responsive{
+    margin: 0 auto;
+    max-height: 30%;
+}
+
+.header {
+    color: #251a06;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #251a06;
+}
+
+h4 {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+
+.boton button {
+  margin-top: 2px;
+  width: 200px;
+}
