@@ -198,9 +198,21 @@
                     <div>
                         <input type="button" value="Buscar" onclick="consultarVuelos();">
                     </div>
-                </div>
+                </div> <!-- tab-content -->
                 <div id="tab-vuelos" class="tab-pane"></div>
                 <div id="tab-datos-personales" class="tab-pane">
+                    <div>   
+                        <input id="input-nomb" type="text" name="nombreApellido" placeholder="Nombre y Apellido" required>
+                    </div>
+                    <div>    
+                        <input id="input-datos-pers" type="number" min=11111111 step=1 value=dni placeholder="DNI" required>
+                    </div>
+                    <div>   
+                        <input id="input-nacionalidad" type="text" name="nacionalidad" placeholder="Nacionalidad" required>
+                    </div>
+                    <div>
+                        <input type="button" value="Aceptar" onclick="consultarVuelos();">
+                    </div>                                        
                 </div>
                 <div id="tab-pagar" class="tab-pane">
                 </div>
