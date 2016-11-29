@@ -118,11 +118,11 @@
                     <li><a href="#tab-datos-personales" data-toggle="tab"><i class="fa fa-user fa-fw"></i>Datos personales</a></li>
                     <li><a href="#tab-pagar" data-toggle="tab"><i class="fa fa-dollar fa-fw"></i>Pagar</a></li>
                     <li><a href="#tab-boleto" data-toggle="tab"><i class="fa fa-id-card-o fa-fw"></i>Su boleto</a></li>
-                </ul>
+                </ul><br>
                 <div class="tab-content text-center">
                     <div id="tab-busqueda" class="tab-pane">
                         <div>
-                            <select id="input-origen" class="selectpicker">
+                            <i class="fa fa-globe fa-lg"> <br> </i><select id="input-origen" class="selectpicker">
                                 <optgroup label="Argentina">
                                     <option>BUENOS AIRES</option>
                                     <option>JUJUY</option>
@@ -154,9 +154,9 @@
                                     <option>MALPENSA</option>
                                 </optgroup>
                             </select>
-                        </div> <!--destino ir -->
+                        </div><br> <!--destino ir -->
                         <div>
-                            <select id="input-destino" class="selectpicker">
+                            <i class="fa fa-globe fa-lg"> <br> </i><select id="input-destino" class="selectpicker">
                                 <optgroup label="Argentina">
                                     <option>BUENOS AIRES</option>
                                     <option>JUJUY</option>
@@ -188,16 +188,12 @@
                                     <option>MALPENSA</option>
                                 </optgroup>
                             </select>
-                        </div> <!--destino ir --> 
-                    <div> <!--tab-busqueda -->
-                        <input id="input-fecha-salida" type="date">
-                    </div>
-                    <div>
-                        <input id="input-pasajeros" type="number" min=1 step=1 value=1>
-                    </div>
-                    <div>
+                        </div><br> <!--destino ir --> 
+                    <span> <!--tab-busqueda -->
+                        <i class="fa fa-calendar fa-lg"> <br> </i><input id="input-fecha-salida" type="date">
+                        <i class="fa fa-user fa-lg"> <br> </i><input id="input-pasajeros" type="number" min=1 step=1 value=1><br><br>
                         <input type="button" value="Buscar" onclick="consultarVuelos();">
-                    </div>
+                    </span>
                 </div> <!-- tab-content -->
                 <div id="tab-vuelos" class="tab-pane"></div>
                 <div id="tab-datos-personales" class="tab-pane">
