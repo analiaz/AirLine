@@ -40,6 +40,20 @@ pager li>a, .pager li>span {
     background-color: #251A06;
 }
 
+#input-nomb {
+    margin-right: 4px;
+}
+
+#input-nomb {
+    margin-right: 4px;
+}
+
+.fa-lg {
+    font-size: 1.33333333em;
+    line-height: .75em;
+    vertical-align: -15%;
+    color: #251a06;
+}
 
 /*------------------------- Carrusel --------------------------------------*/
 
