@@ -47,6 +47,7 @@
                                 `   <span>\$${vuelo.precio}</span>` +
                                 "</div>";
                             $("#tab-vuelos").append(contenido);
+                            $('#tabs-wizard a[href="#tab-vuelos"]').tab('show');
                         });
                     } else {
                         console.log("consultaVuelo, serverError: " + result.error);
@@ -114,7 +115,7 @@
     <div class="conteiner wizard-area">
         <div class="row" >
             <div id="rootwizard">
-                <ul class="nav nav-pills nav-wizard wizard-menu">
+                <ul class="nav nav-pills nav-wizard wizard-menu" id="tabs-wizard">
                     <li><a href="#tab-busqueda" data-toggle="tab"><i class="fa fa-plane fa-fw"></i> Vuelo</a></li>
                     <li><a href="#tab-vuelos" data-toggle="tab"><i class="fa fa-plane fa-fw"></i>Vuelos disponibles</a></li>
                     <li><a href="#tab-datos-personales" data-toggle="tab"><i class="fa fa-user fa-fw"></i>Datos personales</a></li>
@@ -194,7 +195,7 @@
                     <span> <!--tab-busqueda -->
                         <i class="fa fa-calendar fa-lg"> <br> </i><input id="input-fecha-salida" type="date">
                         <i class="fa fa-user fa-lg"> <br> </i><input id="input-pasajeros" type="number" min=1 step=1 value=1><br><br>
-                        <input type="button" value="Buscar" onclick="consultarVuelos();">
+                        <input type="button" value="Buscar" onclick="consultarVuelos();" >
                     </span>
                 </div> <!-- tab-content -->
                 <div id="tab-vuelos" class="tab-pane"></div>
