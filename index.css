@@ -59,6 +59,26 @@ pager li>a, .pager li>span {
     border-style: ridge;
 }
 
+#tab-boleto {
+    background-color: #BF3E11;
+    width: 40%;
+    height: 40%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 20px;
+    -webkit-box-shadow : 7px 5px 12px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow : 7px 5px 12px -2px rgba(0,0,0,0.75);
+    box-shadow : 7px 5px 12px -2px rgba(0,0,0,0.75);
+}
+
+#tab-boleto h3 {
+    color: #251A06;
+}
+
+#tab-boleto .fa {
+  color: #251A06;
+}
 /*------------------------- Carrusel --------------------------------------*/
 
 .container-head {
