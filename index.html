@@ -58,6 +58,9 @@
                 }
             });
         }
+        function aPagar() {
+            $('#tabs-wizard a[href="#tab-pagar"]').tab('show');
+        }
     </script>
 </head>
 <body>
@@ -205,7 +208,7 @@
                         <i class="fa fa-user fa-lg"> <br> </i><input id="input-ape" type="text" name="apellido" placeholder="Apellido" required> <br><br>
                         <i class="fa fa-id-badge fa-lg"> <br> </i><input id="input-datos-pers" type="number" min=11111111 step=1 value=dni placeholder="DNI" required>
                         <i class="fa fa-flag fa-lg"> <br> </i><input id="input-nacionalidad" type="text" name="nacionalidad" placeholder="Nacionalidad" required> <br><br>
-                        <input type="button" value="Aceptar" onclick="consultarVuelos();">
+                        <input type="button" value="Aceptar" onclick="aPagar();">
                     </span>                                       
                 </div>
                 <div id="tab-pagar" class="tab-pane">
