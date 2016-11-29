@@ -81,6 +81,16 @@ pager li>a, .pager li>span {
 }
 /*------------------------- Carrusel --------------------------------------*/
 
+carousel-caption .h1, h1 {
+  color: #f5f4f1;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  top: -320px;
+  left: -470px;
+  text-shadow: 30px;
+  font-weight: inherit;
+}
+
 .container-head {
   background: #BF3E11;
 }
