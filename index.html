@@ -45,6 +45,7 @@
                                 `   <span>${vuelo.fecha_partida}</span>` +
                                 `   <span>${vuelo.fecha_llegada}</span>` +
                                 `   <span>\$${vuelo.precio}</span>` +
+                                `   <span><input type="button" value="Comprar" onclick="aDatosPersonales();"></span>`
                                 "</div>";
                             $("#tab-vuelos").append(contenido);
                             $('#tabs-wizard a[href="#tab-vuelos"]').tab('show');
@@ -57,6 +58,9 @@
                     console.log("consultaVuelo, clientError: " + errorThrown);
                 }
             });
+        }
+        function aDatosPersonales() {
+            $('#tabs-wizard a[href="#tab-datos-personales"]').tab('show');
         }
         function aPagar() {
             $('#tabs-wizard a[href="#tab-pagar"]').tab('show');
