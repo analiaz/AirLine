@@ -40,11 +40,11 @@
                             console.log("vuelo id = " + vuelo.vuelo_id);
                             var contenido =
                                 "<div>" +
-                                `   <span>${consulta.origen}</span>` +
-                                `   <span>${consulta.destino}</span>` +
-                                `   <span>${vuelo.fecha_partida}</span>` +
-                                `   <span>${vuelo.fecha_llegada}</span>` +
-                                `   <span>\$${vuelo.precio}</span>` +
+                                `   <span class="tabWizardVueloRecuadro">${consulta.origen}</span>` +
+                                `   <span class="tabWizardVueloRecuadro">${consulta.destino}</span>` +
+                                `   <span class="tabWizardVueloRecuadro">${vuelo.fecha_partida}</span>` +
+                                `   <span class="tabWizardVueloRecuadro">${vuelo.fecha_llegada}</span>` +
+                                `   <span class="tabWizardVueloRecuadro">\$${vuelo.precio}</span>` +
                                 `   <span><input type="button" value="Comprar" onclick="aDatosPersonales();"></span>`
                                 "</div>";
                             $("#tab-vuelos").append(contenido);

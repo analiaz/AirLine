@@ -55,6 +55,10 @@ pager li>a, .pager li>span {
     color: #251a06;
 }
 
+.tabWizardVueloRecuadro {
+    border-style: ridge;
+}
+
 /*------------------------- Carrusel --------------------------------------*/
 
 .container-head {
